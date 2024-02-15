@@ -17,7 +17,7 @@ const getRandomQuote = async () => {
 
 const getRandomQuoteByAnime = async (name) => {
   const response = await http
-    .get(`quotes/character?name=${name}`)
+    .get(`quotes/anime?title=${name}`)
     .then((res) => {
       return res;
     })
@@ -25,6 +25,7 @@ const getRandomQuoteByAnime = async (name) => {
       console.log("ERROR");
       console.log(e.response);
       alert(e?.response?.data?.error);
+      return e.response;
     });
 
   return response;

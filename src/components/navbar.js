@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import RouteName from "../routes/routeName";
 import { useEffect, useState } from "react";
 import Cookies from "universal-cookie";
@@ -7,7 +7,6 @@ const Navbar = () => {
   const [isLogin, setIsLogin] = useState(false);
 
   const cookies = new Cookies();
-  const navigate = useNavigate();
 
   useEffect(() => {
     checkIsLogin();
